@@ -1,0 +1,61 @@
+/* Keypad.css */
+.keypad-container {
+  background: #ececec;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  padding: 10px;
+  width: 800px;
+  font-family: sans-serif;
+}
+
+.keypad-row {
+  display: flex;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+
+.keypad-row:last-child {
+  margin-bottom: 0;
+}
+
+.keypad-button {
+  flex: 1;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.keypad-button:active {
+  background: #e0e0e0;
+}
+
+.keypad-functionBtn {
+  background: #e6e6e6;
+  font-weight: bold;
+}
+
+.keypad-space {
+  flex: 4;
+}
+
+.keypad-backspace {
+  flex: 1.5;
+}
+
+.keypad-shift, .keypad-meta1, .keypad-meta2, .keypad-default {
+  flex: 1.2;
+}
+
+.keypad-enter, .keypad-accept {
+  flex: 1.5;
+  background: #5cb85c;
+  color: white;
+}
+
+.keypad-enter:active, .keypad-accept:active {
+  background: #4cae4c;
+}

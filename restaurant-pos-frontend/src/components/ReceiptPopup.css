@@ -1,0 +1,22 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt-preview,
+  .receipt-preview * {
+    visibility: visible;
+  }
+  .receipt-preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 75mm;
+    font-size: 10pt;
+    line-height: 1.2;
+    margin: 0;
+    padding: 5mm;
+  }
+  .no-print {
+    display: none;
+  }
+}

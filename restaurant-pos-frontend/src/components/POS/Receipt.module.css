@@ -1,0 +1,194 @@
+/* Base styles for screen display */
+.receiptContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.receipt {
+  font-family: 'Courier New', Courier, monospace;
+  width: 80mm; /* Standard receipt width */
+  min-height: 100mm;
+  padding: 5mm;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+  font-size: 12px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.storeName {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.storeInfo {
+  font-size: 10px;
+  color: #555;
+}
+
+.divider {
+  border-top: 1px dashed #000;
+  margin: 8px 0;
+}
+
+.thickDivider {
+  border-top: 2px solid #000;
+  margin: 8px 0;
+}
+
+.details {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.detailRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  margin: 8px 0;
+}
+
+.th {
+  text-align: left;
+  padding-bottom: 4px;
+  border-bottom: 1px dashed #000;
+  font-weight: bold;
+}
+
+.td {
+  padding: 3px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.alignRight {
+  text-align: right;
+}
+
+.summary {
+  font-size: 11px;
+  margin: 8px 0;
+}
+
+.payment {
+  font-size: 11px;
+  margin: 8px 0;
+}
+
+.footer {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 12px;
+}
+
+.barcode {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.barcodeLines {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+
+.barcodeLine {
+  height: 30px;
+  background: black;
+  width: 2px;
+}
+
+.barcodeLineWide {
+  width: 4px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  font-size: 11px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.buttonClose {
+  background: #ddd;
+}
+
+.buttonPrint {
+  background: #0066cc;
+  color: white;
+}
+
+/* Print-specific styles */
+@media print {
+  @page {
+    size: 80mm auto; /* Thermal printer paper size */
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  /* Hide everything except the receipt */
+  body > *:not(.receiptContainer) {
+    display: none !important;
+  }
+
+  .receiptContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    visibility: visible !important;
+  }
+
+  .receipt {
+    width: 80mm !important;
+    min-height: auto !important;
+    padding: 5mm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Ensure all content is visible */
+  .receipt * {
+    visibility: visible !important;
+  }
+
+  /* Hide buttons when printing */
+  .no-print {
+    display: none !important;
+  }
+}

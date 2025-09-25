@@ -1,0 +1,119 @@
+/* Full page layout */
+.login-page {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Left side (illustration) */
+  .login-left {
+    flex: 1;
+    background-color: #2d6d68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style the illustration */
+  .illustration {
+    max-width: 200%;
+    height: auto;
+    object-fit: contain; /* Ensure the image scales properly */
+  }
+  
+  /* Right side (form) */
+  .login-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(8, 64, 87);
+  }
+  
+  /* Form container */
+  .login-form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+  }
+  
+  /* Form title */
+  .login-form-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Input wrapper (for icon + input) */
+  .input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #065e69;
+    border-radius: 4px;
+    padding: 5px;
+  }
+  
+  /* Input icon */
+  .input-icon {
+    margin: 0 10px;
+    color: #2eb2f0;
+  }
+  
+  /* Input field */
+  .input-wrapper input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    font-size: 16px;
+  }
+  
+  /* Checkbox group */
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .checkbox-group input {
+    margin-right: 10px;
+  }
+  
+  .checkbox-group label {
+    font-size: 14px;
+    color: #fffdfd;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: #d9534f;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Login button */
+  .login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2; /* Blue from the image */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #357ABD; /* Darker blue on hover */
+  }

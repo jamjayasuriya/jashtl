@@ -1,0 +1,92 @@
+/* Tailwind Directives (required) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Resets or Overrides */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 50px;
+}
+
+/* Optional: Base Styles for Elements (if not using Tailwind classes) */
+button {
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+input, textarea, select {
+  padding: 8px;
+  margin: 5px;
+  color: #000000 !important; /* Explicitly set black text for all inputs as default */
+  background-color: #ffffff !important; /* Ensure white background */
+}
+
+/* Optional: Keep Vite Defaults if Desired */
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --text-color: rgba(0, 0, 0, 0.87); /* Default text color */
+  --bg-color: #ffffff; /* Default background color */
+  --cart-bg: #f9fafb; /* gray-50 */
+  --border-color: #e5e7eb; /* gray-200 */
+}
+
+/* Optional: Dark/Light Mode Support */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #f3f6f7;
+  }
+  input, textarea, select {
+    color: #000000 !important; /* Ensure black text in light mode */
+    background-color: #ffffff !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(20, 5, 5, 0.87);
+    background-color: #242424;
+  }
+  input, textarea, select {
+    color: #ffffff !important; /* White text for dark mode to contrast with dark background */
+    background-color: #374151 !important; /* Dark background for dark mode */
+  }
+}
+
+/* Specific override for popup inputs to ensure black text */
+.ItemPopup input {
+  color: #000000 !important; /* Force black text in popup inputs */
+}
+
+/* Ensure all form inputs have visible text */
+input[type="text"], 
+input[type="email"], 
+input[type="number"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="url"], 
+textarea, 
+select {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+}
+
+/* Focus states */
+input:focus, 
+textarea:focus, 
+select:focus {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+  border-color: #f59e0b !important;
+  outline: none !important;
+  box-shadow: 0 0 0 1px #f59e0b !important;
+}
